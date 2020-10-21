@@ -71,7 +71,9 @@
                address="{{ instance.address | default(tomcat_address) }}"
                protocol="HTTP/1.1"
                connectionTimeout="20000"
-	    redirectPort="{{ instance.ssl_connector_port | default(tomcat_ssl_connector_port) }}" secretRequired="{{ instance.ajp_secret_required |default('false') }}" secret="{{ instance.ajp_secret| default('') }}" />
+	       redirectPort="{{ instance.ssl_connector_port | default(tomcat_ssl_connector_port) }}" 
+	       secretRequired="{{ instance.ajp_secret_required |default('false') }}" 
+	       secret="{{ instance.ajp_secret| default('') }}" />
 
     <!-- A "Connector" using the shared thread pool-->
     <!--
